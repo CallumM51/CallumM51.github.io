@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
@@ -5,6 +9,10 @@
 
 body{
     margin: 0;
+}
+
+a{
+    text-decoration: none;
 }
 
 .name{
@@ -101,6 +109,31 @@ body{
 }
 
 .main{
-    margin-left: min(350px, 33vw); 
-    padding: 0px 10px;
+    margin: 0 min(350px, 33vw); 
+    padding: 10vh 60px;
+    text-align: center;
+}
+
+p{
+    text-align: left;
+}
+
+h2{
+    text-align: left;
+    margin-left: 1vw;
+}
+
+.main-sec{
+    border-width: 0 0 0.5px 0;
+    border-style: solid;
+    border-color: #c7c7c7;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+}
+
+#main-pic{
+    width: 1000px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 1px 2px #302b27);
 }
