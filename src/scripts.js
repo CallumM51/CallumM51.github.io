@@ -3,22 +3,32 @@ function toggleLightMode(){
     console.log("Whoosh, dark mode")
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+    const tocLinks = 
+          document.querySelectorAll('.content a');
+    const sections = 
+          document.querySelectorAll('.section');
 
-	const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			const id = entry.target.getAttribute('id');
-			if (entry.intersectionRatio > 0) {
-				document.querySelector(`nav li  a[href="#${id}"]`).parentElement.classList.add('active');
-			} else {
-				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
-			}
-		});
-	});
-
-	// Track all sections that have an `id` applied
-	document.querySelectorAll('section[id]').forEach((section) => {
-		observer.observe(section);
-	});
-	
+    window.addEventListener('scroll', function () {
+        const currentPos = window.scrollY + 3 *(window.innerHeight/4);
+        sections.forEach(function (section) {
+            const sectionTop = section.offsetTop - 50;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+			
+            if (currentPos >= sectionTop && 
+                currentPos < sectionTop + sectionHeight) {
+					tocLinks.forEach(function (tocLink) {
+                    tocLink.classList.remove('active');
+                });
+			document.getElementById( sectionId + '-toc').children[0].classList.add('active')
+            }
+        });
+    });
 });
+
+function goTo(id){
+	sectionTop = document.getElementById(id).offsetTop + 50;
+	dropPoint = sectionTop - 3 *(window.innerHeight/4);
+	scrollTo(0,dropPoint)
+}

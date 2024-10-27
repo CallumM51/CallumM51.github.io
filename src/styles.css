@@ -74,6 +74,12 @@ a{
 
 .nav-btn:hover{
     background-color: whitesmoke;
+    color: rgb(27, 117, 208);
+}
+
+.nav-btn:hover > .icon{
+    transition: 400ms ease-in;
+    fill: rgb(27, 117, 208);
 }
 
 .navgroup{
@@ -123,7 +129,7 @@ h2{
     margin-left: 1vw;
 }
 
-.main-sec{
+.main-divide{
     border-width: 0 0 0.5px 0;
     border-style: solid;
     border-color: #c7c7c7;
@@ -138,7 +144,7 @@ h2{
     filter: drop-shadow(0px 1px 2px #302b27);
 }
 
-.toc{
+.toc-bar{
     width: 33vw;
     max-width: 350px;
     height: 100%;
@@ -153,4 +159,39 @@ h2{
    text-align: center;
    justify-content: center;
    align-items: center;
+}
+
+.toc{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1;
+    gap: 10px;
+     border-right: 2px solid rgba(27, 118, 208, 0.5);
+}
+
+.content{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.content > a{
+    text-decoration: none;
+    padding: 0 5px;
+    color: #808080;
+    background-color: white;
+    text-align: right;
+    padding: 2.5px 5px 2.5px 10px;
+}
+
+.content > a:hover{
+    background: rgba(27, 118, 208, 0.5);
+    border-radius: 5px 0 0 5px;
+    color: #302b27;
+}
+
+.content > .active{
+    background: rgba(27, 118, 208, 0.5);
+    border-radius: 5px 0 0 5px;
+    color: #302b27;
 }

@@ -51,7 +51,7 @@
                     <div class="btn-label">Experience</div>
                 </div>
             </a>
-            <a href="baseball.html">
+            <a href="/baseball.html">
                 <div class="nav-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="baseballico" viewBox="0 -960 960 960">
                         <path d="M167-231q-42-54-64.5-117.5T80-480q0-68 22.5-131.5T167-729q58 45 91 110.5T291-480q0 73-33 138.5T167-231ZM480-80q-72 0-137.5-24T223-174q69-57 108-136.5T370-480q0-90-39-169.5T223-786q54-46 119.5-70T480-880q72 0 137.5 24T737-786q-69 57-108 136.5T590-480q0 90 39 169.5T737-174q-54 46-119.5 70T480-80Zm313-151q-58-45-91-110.5T669-480q0-73 33-138.5T793-729q42 54 64.5 117.5T880-480q0 68-22.5 131.5T793-231Z"/>
@@ -88,23 +88,23 @@
         </div>  
     </div>
     <div class="main">
-        <div class="main-sec">
+        <div class="section main-divide" id="top">
             <p>Hi, welcome to my website! I am a fourth year software engineering student at the University of Calgary, and a Dinos Baseball Alumnus. 
                 On this site you can find links, and stories about my project, experiences, and time with Dinos Baseball. 
                 Be sure to check out the links to my socials in the bottom of the Nav-Bar. Enjoy!
             </p>
             <img src="/Assets/img/main.jpg" alt="A photo of me" id="main-pic">
         </div>
-        <div class="main-sec">
-            <a id="projects"><h2>Projects:</h2></a>
+        <div class="section main-divide" id="projects">
+            <a><h2>Projects:</h2></a>
             <p>From distributed computing, fun quiz games and beyond, I have completed numerous projects for school or as a hobby. 
                 To name a few, a study on twitter bot detection with a specific lens on the Russia Ukraine conflict, or my fun geography quiz, all featured in the projects tab.
                 Be sure to be on the look out for updates on my capstone project which I will be working on for Southbow Corp.
                 Want to know more about some of the projects I have been working on in my spare time or at school? Check out the projects page!
             </p>
         </div>
-        <div class="main-sec">
-            <a id="experience"><h2>Experience:</h2></a>
+        <div class="section main-divide" id="experience">
+            <a><h2>Experience:</h2></a>
             <p>I have 20 months of internship experience, along with 8 months of work experience in the Canadian energy industry.
                 I believe that the world needs more Canadian energy and I love using technology to improve the way we access it.
                 I have been fortunate enough to have had numerous amazing experiences doing just that. 
@@ -112,18 +112,22 @@
                 See the full stories on the Experience page!
             </p>
         </div>
-        <a id="baseball"><h2>Baseball:</h2></a>
+        <div class="section" id="baseball">
+            <a><h2>Baseball:</h2></a>
             <p>I have played baseball since I was 5 and since then I have gotten quite good at it.
                 By far my best achievements happened during my 7 years with the UofC Dinos as a pitcher.
                 Dinos baseball has taught me how to work hard, how to persevere through struggles, and how to be a leader.
                 Check out my story of going from a JV sub to the Club's president, and Nation Championship team member on the Baseball page.
             </p>
+        </div>
     </div>
-    <toc class="toc">
-        <div class="content"><a href="#top">Top</a></div>
-        <div class="content"><a href="#projects">Projects</a></div>
-        <div class="content"><a href="#experience">Experience</a></div>
-        <div class="content"><a href="#baseball">Baseball</a></div>
+    <toc class="toc-bar">
+        <div class="toc">
+            <div class="content" id="top-toc" onclick="goTo('top')"><a href="#nowhere">Top</a></div>
+            <div class="content" id="projects-toc"  onclick="goTo('projects')"><a href="#nowhere">Projects</a></div>
+            <div class="content" id="experience-toc"  onclick="goTo('experience')"><a href="#nowhere">Experience</a></div>
+            <div class="content" id="baseball-toc"  onclick="goTo('baseball')"><a href="#nowhere">Baseball</a></div>
+        </div>
     </toc>
 </body> 
 </html>
